@@ -10,7 +10,6 @@ package com.onlinetutorialspoint.soap.bindings;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -25,7 +24,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="sessionToken" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="searchId" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -36,28 +36,53 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "id"
+    "sessionToken",
+    "searchId"
 })
-@XmlRootElement(name = "ItemRequest", namespace = "http://onlinetutorialspoint.com/generated")
-public class ItemRequest {
+@XmlRootElement(name = "CheckSearchStatus")
+public class CheckSearchStatus {
 
-    @XmlElement(namespace = "http://onlinetutorialspoint.com/generated")
-    protected int id;
+    protected String sessionToken;
+    protected int searchId;
 
     /**
-     * Gets the value of the id property.
+     * Gets the value of the sessionToken property.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public int getId() {
-        return id;
+    public String getSessionToken() {
+        return sessionToken;
     }
 
     /**
-     * Sets the value of the id property.
+     * Sets the value of the sessionToken property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setSessionToken(String value) {
+        this.sessionToken = value;
+    }
+
+    /**
+     * Gets the value of the searchId property.
      * 
      */
-    public void setId(int value) {
-        this.id = value;
+    public int getSearchId() {
+        return searchId;
+    }
+
+    /**
+     * Sets the value of the searchId property.
+     * 
+     */
+    public void setSearchId(int value) {
+        this.searchId = value;
     }
 
 }

@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="ExecuteQuickSearchWithSolutionIdResult" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -36,28 +36,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "id"
+    "executeQuickSearchWithSolutionIdResult"
 })
-@XmlRootElement(name = "ItemRequest", namespace = "http://onlinetutorialspoint.com/generated")
-public class ItemRequest {
+@XmlRootElement(name = "ExecuteQuickSearchWithSolutionIdResponse")
+public class ExecuteQuickSearchWithSolutionIdResponse {
 
-    @XmlElement(namespace = "http://onlinetutorialspoint.com/generated")
-    protected int id;
+    @XmlElement(name = "ExecuteQuickSearchWithSolutionIdResult")
+    protected String executeQuickSearchWithSolutionIdResult;
 
     /**
-     * Gets the value of the id property.
+     * Gets the value of the executeQuickSearchWithSolutionIdResult property.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public int getId() {
-        return id;
+    public String getExecuteQuickSearchWithSolutionIdResult() {
+        return executeQuickSearchWithSolutionIdResult;
     }
 
     /**
-     * Sets the value of the id property.
+     * Sets the value of the executeQuickSearchWithSolutionIdResult property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setId(int value) {
-        this.id = value;
+    public void setExecuteQuickSearchWithSolutionIdResult(String value) {
+        this.executeQuickSearchWithSolutionIdResult = value;
     }
 
 }

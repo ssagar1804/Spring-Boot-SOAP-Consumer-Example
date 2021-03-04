@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="RetrieveSearchResultsPageByPageSizeResult" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -36,28 +36,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "id"
+    "retrieveSearchResultsPageByPageSizeResult"
 })
-@XmlRootElement(name = "ItemRequest", namespace = "http://onlinetutorialspoint.com/generated")
-public class ItemRequest {
+@XmlRootElement(name = "RetrieveSearchResultsPageByPageSizeResponse")
+public class RetrieveSearchResultsPageByPageSizeResponse {
 
-    @XmlElement(namespace = "http://onlinetutorialspoint.com/generated")
-    protected int id;
+    @XmlElement(name = "RetrieveSearchResultsPageByPageSizeResult")
+    protected String retrieveSearchResultsPageByPageSizeResult;
 
     /**
-     * Gets the value of the id property.
+     * Gets the value of the retrieveSearchResultsPageByPageSizeResult property.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public int getId() {
-        return id;
+    public String getRetrieveSearchResultsPageByPageSizeResult() {
+        return retrieveSearchResultsPageByPageSizeResult;
     }
 
     /**
-     * Sets the value of the id property.
+     * Sets the value of the retrieveSearchResultsPageByPageSizeResult property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setId(int value) {
-        this.id = value;
+    public void setRetrieveSearchResultsPageByPageSizeResult(String value) {
+        this.retrieveSearchResultsPageByPageSizeResult = value;
     }
 
 }

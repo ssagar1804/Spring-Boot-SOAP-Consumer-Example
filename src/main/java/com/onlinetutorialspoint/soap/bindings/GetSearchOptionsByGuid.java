@@ -10,7 +10,6 @@ package com.onlinetutorialspoint.soap.bindings;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -25,9 +24,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
- *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="category" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="sessionToken" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="searchReportGuid" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -38,82 +36,61 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "id",
-    "name",
-    "category"
+    "sessionToken",
+    "searchReportGuid"
 })
-@XmlRootElement(name = "ItemResponse", namespace = "http://onlinetutorialspoint.com/generated")
-public class ItemResponse {
+@XmlRootElement(name = "GetSearchOptionsByGuid")
+public class GetSearchOptionsByGuid {
 
-    @XmlElement(namespace = "http://onlinetutorialspoint.com/generated")
-    protected int id;
-    @XmlElement(namespace = "http://onlinetutorialspoint.com/generated", required = true)
-    protected String name;
-    @XmlElement(namespace = "http://onlinetutorialspoint.com/generated", required = true)
-    protected String category;
+    protected String sessionToken;
+    protected String searchReportGuid;
 
     /**
-     * Gets the value of the id property.
-     * 
-     */
-    public int getId() {
-        return id;
-    }
-
-    /**
-     * Sets the value of the id property.
-     * 
-     */
-    public void setId(int value) {
-        this.id = value;
-    }
-
-    /**
-     * Gets the value of the name property.
+     * Gets the value of the sessionToken property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getName() {
-        return name;
+    public String getSessionToken() {
+        return sessionToken;
     }
 
     /**
-     * Sets the value of the name property.
+     * Sets the value of the sessionToken property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setName(String value) {
-        this.name = value;
+    public void setSessionToken(String value) {
+        this.sessionToken = value;
     }
 
     /**
-     * Gets the value of the category property.
+     * Gets the value of the searchReportGuid property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getCategory() {
-        return category;
+    public String getSearchReportGuid() {
+        return searchReportGuid;
     }
 
     /**
-     * Sets the value of the category property.
+     * Sets the value of the searchReportGuid property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setCategory(String value) {
-        this.category = value;
+    public void setSearchReportGuid(String value) {
+        this.searchReportGuid = value;
     }
 
 }
