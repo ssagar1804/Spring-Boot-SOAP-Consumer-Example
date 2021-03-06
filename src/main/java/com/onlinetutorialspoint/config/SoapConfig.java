@@ -10,7 +10,7 @@ public class SoapConfig {
     @Bean
     public Jaxb2Marshaller marshaller(){
         Jaxb2Marshaller jaxb2Marshaller = new Jaxb2Marshaller();
-        jaxb2Marshaller.setPackagesToScan("com.onlinetutorialspoint.soap.bindings");
+        jaxb2Marshaller.setContextPath("com.onlinetutorialspoint.soap.bindings");
         return jaxb2Marshaller;
     }
 }
